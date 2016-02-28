@@ -17,6 +17,7 @@ body {
 .profilearea {
     width: 200px;
     border: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
     padding: 10px;
     background: #fff;
     border-radius: 3px;
@@ -29,6 +30,7 @@ body {
 .contentarea {
     width: 600px;
     border: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
     padding: 10px;
     background: #fff;
     border-radius: 3px;
@@ -66,9 +68,51 @@ body {
 .contentarea .contentfooter button:hover {
     background-color: #27ae60;
 }
+.content-header {
+    width: 600px;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    padding: 10px;
+    margin: auto;
+    background: #fff;
+    border-radius: 3px 3px 0 0;
+    float:right;
+    word-wrap: break-word;
+}
+/*
+.content-header a {
+    float: right;
+}
+.content-header a.edit {
+    border: 1px solid #2980b9;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 3px 0 0 3px;
+    padding: 5px 10px;
+}
+.content-header a.edit:hover {
+    background-color: #2980b9; 
+}
+.content-header a.delete {
+    border: 1px solid #c0392b;
+    border-left: 0;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 0 3px 3px 0;
+    padding: 5px 10px;
+}
+.content-header a.delete:hover {
+    background-color: #c0392b;
+}
+*/
 .view {
     width: 600px;
     border: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
     padding: 10px;
     margin: auto;
     background: #fff;
