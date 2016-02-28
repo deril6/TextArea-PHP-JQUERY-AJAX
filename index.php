@@ -22,67 +22,54 @@ $stmt->execute();
     </head>
     <body>
         <div class="wrapper">
-            <div class="">
-            <div class="profilearea">
-                <div class="handler">
-                    <a href="#" class="icon" title="Emmanuel See Te">
-                        <span class="image">
-                            <img src="img/dp.jpg" />
-                        </span>
-                        <div class="text user">
-                            Emmanuel See Te
-                        </div>
-                    </a>
+            <div class="sidebar">
+                <div class="sidebar-panel">
+                    <div class="handler">
+                        <a href="#" class="icon" title="Emmanuel See Te">
+                            <span class="image">
+                                <img src="img/dp.jpg" />
+                            </span>
+                            <div class="text user">
+                                Emmanuel See Te
+                            </div>
+                        </a>
+                    </div>
+                    <div class="handler">
+                        <a href="#" class="icon" title="News Feed">
+                            <span class="image">
+                                <img src="img/news.svg" />
+                            </span>
+                            <div class="text">
+                                News Feed
+                            </div>
+                        </a>
+                    </div>
+                    <div class="handler">
+                        <a href="?truncate" class="icon" title="Log out">
+                            <span class="image">
+                                <img src="img/delete.svg" />
+                            </span>
+                            <div class="text">
+                                Delete All Posts
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="handler">
-                    <a href="#" class="icon" title="News Feed">
-                        <span class="image">
-                            <img src="img/news.svg" />
-                        </span>
-                        <div class="text">
-                            News Feed
-                        </div>
-                    </a>
+                <div class="sidebar-panel">
+                    <div class="links">
+                        <a href="https://github.com/mannyseete/" target="_blank">
+                            <img src="img/github.svg" />
+                        </a>
+                        <a href="https://www.facebook.com/insightcoders/" target="_blank">
+                            <img src="img/facebook.svg" />
+                        </a>
+                        <a href="https://twitter.com/MannyGSH" target="_blank">
+                            <img src="img/twitter.svg" />
+                        </a>
+                    </div>
                 </div>
-                <div class="handler">
-                    <a href="#" class="icon" title="Edit Profile">
-                        <span class="image">
-                            <img src="img/pencil.svg" />
-                        </span>
-                        <div class="text">
-                            Edit Profile
-                        </div>
-                    </a>
-                </div>
-                <div class="handler">
-                    <a href="#" class="icon" title="Edit Profile">
-                        <span class="image">
-                            <img src="img/help.svg" />
-                        </span>
-                        <div class="text">
-                            Help
-                        </div>
-                    </a>
-                </div>
-                <div class="handler">
-                    <a href="#" class="icon" title="Log out">
-                        <span class="image">
-                            <img src="img/logout.svg" />
-                        </span>
-                        <div class="text">
-                            Log out
-                        </div>
-                    </a>
-                </div>
-                <div class="handler">
-                    <a href="?truncate" class="icon" title="Log out">
-                        <span class="image">
-                            <img src="img/delete.svg" />
-                        </span>
-                        <div class="text">
-                            Delete All Posts
-                        </div>
-                    </a>
+                <div class="sidebar-panel">
+                    <div class="footer">Please Read the License File<br />&copy; 2016 - InsightCoders</div>
                 </div>
             </div>
             <div class="contentarea">
@@ -114,6 +101,20 @@ $stmt->execute();
                         });
                     }
                 });
+            });
+            $('[contenteditable]').on('paste', function(e) {
+                e.preventDefault();
+                var text = '';
+                if (e.clipboardData || e.originalEvent.clipboardData) {
+                    text = (e.originalEvent || e).clipboardData.getData('text/plain');
+                } else if (window.clipboardData) {
+                    text = window.clipboardData.getData('Text');
+                }
+                if (document.queryCommandSupported('insertText')) {
+                    document.execCommand('insertText', false, text);
+                } else {
+                    document.execCommand('paste', false, text);
+                }
             });
         </script>
     </body>
