@@ -1,5 +1,12 @@
 <?php
 require_once('conn.php');
+
+if(isset($_GET['truncate'])) {
+    $stmt = $conn->prepare('TRUNCATE TABLE tbl_posts');
+    $stmt->execute();
+    header('location:index.php');
+}
+
 $stmt = $conn->prepare('SELECT * FROM tbl_posts ORDER BY post_id DESC');
 $stmt->execute();
 ?>
@@ -67,9 +74,19 @@ $stmt->execute();
                         </div>
                     </a>
                 </div>
+                <div class="handler">
+                    <a href="?truncate" class="icon" title="Log out">
+                        <span class="image">
+                            <img src="img/delete.svg" />
+                        </span>
+                        <div class="text">
+                            Delete All Posts
+                        </div>
+                    </a>
+                </div>
             </div>
             <div class="contentarea">
-                <div id="post" name="post" class="textarea" contenteditable="true" area-multiline="true" placeholder="What's up on your day?" role="combobox" spellcheck="true"></div>
+                <div id="post" name="post" class="textarea" contenteditable="true" placeholder="What's up on your day?"></div>
                 <div class="contentfooter">
                     <button type="submit" id="submit">Post</button>
                 </div>
