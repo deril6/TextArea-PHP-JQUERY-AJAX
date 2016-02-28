@@ -2,7 +2,7 @@
 require_once('conn.php');
 if(isset($_POST['post'])) {
     $content = $_POST['post'];
-    $content = str_ireplace("<div><br></div>","",$content);
+    $content = str_ireplace("<br><br>","",$content);
     $detect_url = '#(https?|ftp|file)://[-A-Za-z0-9+&@\#/%()?=~_|$!:,.;]*[-A-Za-z0-9+&@\#/%()=~_|$]#';
     if($content != "") {
 //        echo count(preg_match($detect_url,$content,$url));
