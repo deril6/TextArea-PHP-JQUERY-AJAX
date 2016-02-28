@@ -62,6 +62,9 @@ body {
     min-height: 50px;
     word-wrap: break-word;
     color: #333;
+    font-size: 14px;
+    line-height: 1.38em;
+    font-weight: normal;
 }
 .contentarea .textarea[contenteditable=true]:empty:not(:focus):before{
     font-style: italic;
