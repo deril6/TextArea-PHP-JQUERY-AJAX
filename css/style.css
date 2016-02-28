@@ -6,7 +6,7 @@ body {
     margin: 0 auto;
     padding: 0 auto;
     background-color: #f1f1f1;
-    font-family: Tahoma;
+    font-family: Helvetica;
 }
 .wrapper {
     width: 870px;
@@ -14,26 +14,45 @@ body {
     padding: auto;
     padding-top:10px;
 }
-.profilearea {
-    width: 200px;
-    border: 1px solid #ccc;
-    border-bottom: 2px solid #ccc;
-    padding: 10px;
-    background: #fff;
-    border-radius: 3px;
-    margin-right: 10px;
+.sidebar {
+    position: fixed;
     float:left;
 }
-.profilearea .profilehandler {
+.sidebar-panel {
+    width: 200px;
+    border: 1px solid #e9eaed;
+    padding: 10px;
+    background: #fff;
+    border-radius: 1px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.sidebar-panel .profilehandler {
     word-wrap: break-word;
+}
+.sidebar-panel .links {
+    text-align: center;
+}
+.sidebar-panel .links a {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    margin: 0 2px;
+}
+.sidebar-panel .links a img { 
+    width: 25px;
+}
+.sidebar-panel .footer {
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.25em;
 }
 .contentarea {
     width: 600px;
-    border: 1px solid #ccc;
-    border-bottom: 2px solid #ccc;
+    border: 1px solid #e9eaed;
     padding: 10px;
     background: #fff;
-    border-radius: 3px;
+    border-radius: 1px;
     margin-bottom: 10px;
     float:right;
 }
@@ -62,7 +81,7 @@ body {
     cursor: pointer;
     font-size: 14px;
     padding: 5px 25px;
-    border-radius: 3px;
+    border-radius: 1px;
     outline: none;
 }
 .contentarea .contentfooter button:hover {
@@ -111,19 +130,28 @@ body {
 */
 .view {
     width: 600px;
-    border: 1px solid #ccc;
-    border-bottom: 2px solid #ccc;
+    border: 1px solid #e9eaed;
     padding: 10px;
     margin: auto;
     background: #fff;
-    border-radius: 3px;
+    border-radius: 1px;
     margin-bottom: 10px;
     float:right;
     word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.38em;
+    font-weight: normal;
+    color: #141823;
+    direction: ltr;
+    zoom: 1;
 }
 .view a{
     text-decoration: none;
     color: #27ae60;
+    outline:none;
+}
+.view a:hover {
+    text-decoration: underline;
 }
 .handler {
     width:100%;
@@ -132,7 +160,7 @@ body {
     display: block;
     text-decoration: none;
     color: inherit;
-    border-radius: 3px;
+    border-radius: 1px;
 }
 .handler .icon:hover {
     background-color: rgba(200,200,200,.3);
@@ -140,7 +168,7 @@ body {
 .handler .icon .image img {
     margin:5px 0 5px 5px;
     width: 21px;
-    border-radius: 3px;
+    border-radius: 1px;
     vertical-align: middle;
 }
 .handler .icon .text.user{
