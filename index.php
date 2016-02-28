@@ -20,7 +20,7 @@ $stmt->execute();
                 <div class="handler">
                     <a href="#" class="icon" title="Emmanuel See Te">
                         <span class="image">
-                            <img src="img/dp.jpg" />
+                            <img src="https://cloud.githubusercontent.com/assets/6229881/13377640/32001322-de1e-11e5-95e2-208d88a4fd77.jpg" />
                         </span>
                         <div class="text user">
                             Emmanuel See Te
