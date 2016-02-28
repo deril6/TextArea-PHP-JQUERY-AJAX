@@ -2,6 +2,7 @@
 require_once('conn.php');
 if(isset($_POST['post'])) {
     $content = $_POST['post'];
+    $content = str_ireplace('<div><br></div>','',$content);
     $content = preg_replace('/(<br\ ?\/?>)+/','<br>',$content);
     $detect_url = '#(https?|ftp|file)://[-A-Za-z0-9+&@\#/%()?=~_|$!:,.;]*[-A-Za-z0-9+&@\#/%()=~_|$]#';
     if($content != "") {
