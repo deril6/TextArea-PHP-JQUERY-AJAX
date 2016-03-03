@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 27, 2016 at 12:06 PM
+-- Generation Time: Mar 03, 2016 at 07:21 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.19
 
@@ -30,18 +30,16 @@ USE `db_post`;
 
 CREATE TABLE IF NOT EXISTS `tbl_posts` (
   `post_id` int(11) NOT NULL AUTO_INCREMENT,
-  `post_content` longtext NOT NULL,
+  `post_content` longtext,
   PRIMARY KEY (`post_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `tbl_posts`
 --
 
 INSERT INTO `tbl_posts` (`post_id`, `post_content`) VALUES
-(1, 'First Post'),
-(2, 'Second post without refresh :)'),
-(3, 'and last Third Post :)<br><br>Hi Programmers, Developers!''');
+(1, '<div class="view">Feel free to use :)&nbsp;<div><a target="_blank" href="https://github.com/mannyseete/TextArea-PHP-JQUERY-AJAX">https://github.com/mannyseete/TextArea-PHP-JQUERY-AJAX</a></div></div>');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
