@@ -16,5 +16,5 @@ if(isset($_POST['post'])) {
         echo $content;
         die();
     }
-}
+} else { header("location:index.php"); }
 ?>

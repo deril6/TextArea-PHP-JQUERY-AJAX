@@ -190,3 +190,10 @@ body {
 .clear {
     clear: both;
 }
+.error {
+    display: block;
+    border: 1px solid #c0392b;
+    background: #e74c3c;
+    color: #fff;
+    transition: all 0.5s ease;
+}
