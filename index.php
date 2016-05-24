@@ -12,7 +12,7 @@ $stmt->execute();
 ?>
 <!DOCTYPE html>
 <!-- 
-----    EMMANUEL S. SEE TE 
+----    Koro Jr
 --> 
 <html>
     <head>
@@ -27,10 +27,10 @@ $stmt->execute();
                     <div class="handler">
                         <a href="#" class="icon" title="Emmanuel See Te">
                             <span class="image">
-                                <img src="img/dp.jpg" />
+                                <img src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t1.0-9/13119024_1242433572452221_8584795086977805284_n.jpg?oh=67ffcfb28e31a0906828cfbe4f11c265&oe=57D3397F" />
                             </span>
                             <div class="text user">
-                                Emmanuel See Te
+                                Koro Jr
                             </div>
                         </a>
                     </div>
@@ -60,7 +60,7 @@ $stmt->execute();
                         <a href="https://github.com/mannyseete/" target="_blank">
                             <img src="img/github.svg" />
                         </a>
-                        <a href="https://www.facebook.com/insightcoders/" target="_blank">
+                        <a href="https://www.facebook.com/otakunityofficial/" target="_blank">
                             <img src="img/facebook.svg" />
                         </a>
                         <a href="https://twitter.com/MannyGSH" target="_blank">
@@ -69,7 +69,7 @@ $stmt->execute();
                     </div>
                 </div>
                 <div class="sidebar-panel">
-                    <div class="footer">Please Read the License File<br />&copy; 2016 - InsightCoders</div>
+                    <div class="footer">Please Read the License File<br />&copy; 2016 - Koro Jr</div>
                 </div>
             </div>
             <div class="contentarea">
