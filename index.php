@@ -17,7 +17,7 @@ $stmt->execute();
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Text Area</title>
+        <title>Koro Jr</title>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
     <body>
@@ -72,6 +72,7 @@ $stmt->execute();
                     <div class="footer">Please Read the License File<br />&copy; 2016 - Koro Jr</div>
                 </div>
             </div>
+            
             <div class="contentarea">
                 <div id="post" name="post" class="textarea" contenteditable="true" placeholder="What's up on your day?"></div>
                 <div class="contentfooter">
@@ -79,7 +80,8 @@ $stmt->execute();
                 </div>
                 <div class="clear"></div>
             </div>
-            <span id="test"/>
+            <span id="msg"></span>
+            <span id="test"></span>
             <?php
             if($stmt->rowCount() > 0) {
                 $result = $stmt->fetchAll();
@@ -89,7 +91,7 @@ $stmt->execute();
             }
             ?>
         </div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
         <script>
             $(document).ready(function(){
                 $("#submit").click(function(){
@@ -98,23 +100,26 @@ $stmt->execute();
                         $.post("post.php", { post: post }).done(function( data ){
                             $("#test").prepend( data );
                             $("#post").html("");
+                            $("#msg").html("");
                         });
+                    } else {
+                        $("#msg").html("<div class='view error'><b>Status Is Empty</b><br />This status update appears to be blank. Please write something or attach a link or photo to update your status.</div>");
                     }
                 });
-            });
-            $('[contenteditable]').on('paste', function(e) {
-                e.preventDefault();
-                var text = '';
-                if (e.clipboardData || e.originalEvent.clipboardData) {
-                    text = (e.originalEvent || e).clipboardData.getData('text/plain');
-                } else if (window.clipboardData) {
-                    text = window.clipboardData.getData('Text');
-                }
-                if (document.queryCommandSupported('insertText')) {
-                    document.execCommand('insertText', false, text);
-                } else {
-                    document.execCommand('paste', false, text);
-                }
+                $('[contenteditable]').on('paste', function(e) {
+                    e.preventDefault();
+                    var text = '';
+                    if (e.clipboardData || e.originalEvent.clipboardData) {
+                        text = (e.originalEvent || e).clipboardData.getData('text/plain');
+                    } else if (window.clipboardData) {
+                        text = window.clipboardData.getData('Text');
+                    }
+                    if (document.queryCommandSupported('insertText')) {
+                        document.execCommand('insertText', false, text);
+                    } else {
+                        document.execCommand('paste', false, text);
+                    }
+                });
             });
         </script>
     </body>
